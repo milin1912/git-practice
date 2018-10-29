@@ -21,6 +21,13 @@ class TestClass(object):
             else:
                 print i
 
+    def fib(n):
+        if n < 2:
+            return n
+        return fib(n-2) + fib(n-1)
+
+    print map(fib, range(1, 5))
+
     def json_to_csv(self, json_file_path, outfile_path):
         """Convert a file containing a list of flat JSON objects to a csv.
 
